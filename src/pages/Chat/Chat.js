@@ -8,7 +8,7 @@ import PerfectScrollbar from "react-perfect-scrollbar"
 import "react-perfect-scrollbar/dist/css/styles.css"
 
 // Import Breadcrumb
-import axiosInstance from "service/axiosConfig"
+import axiosInstance from "../../service/axiosConfig"
 import Swal from "sweetalert2"
 import { FeedbackModel } from "components/Common/FeedbackModel"
 import { WelcomeModal } from "components/Common/WelcomeModal"
@@ -278,7 +278,6 @@ const Chat = () => {
         chat_list: list_chat,
         is_custom_prompt: isCustomPrompt,
         custom_prompt: title,
-        bible_version: bibleVersion,
       })
       .then(response => {
         var resp = response.data
