@@ -1,4 +1,6 @@
 import React, { useEffect, useReducer, useRef, useState } from "react"
+import ReactMarkdown from 'react-markdown';
+
 import { Link } from "react-router-dom"
 import { map } from "lodash"
 import { Card, Col, Container, Input, Row, Button } from "reactstrap"
@@ -329,6 +331,15 @@ const Chat = () => {
     return messages
   }
 
+  function ChatMessage({ message }) {
+    return (
+      <div className="chat-message">
+        <ReactMarkdown>{message}</ReactMarkdown>
+      </div>
+    );
+  }
+  
+
   return (
     <React.Fragment>
       <div className="page-content">
@@ -598,7 +609,7 @@ const Chat = () => {
                                             textAlign: "left",
                                           }}
                                         >
-                                          {message.message}
+                                          <ChatMessage message={message.message} />
                                         </p>
                                         {showButtons && (
                                           <div
