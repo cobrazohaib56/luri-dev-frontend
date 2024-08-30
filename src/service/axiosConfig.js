@@ -2,7 +2,8 @@ import axios from "axios"
 const axiosInstance = axios.create({
   baseURL: process.env.NODE_ENV === 'development' ?
         "http://127.0.0.1:8000" :
-        "https://luri-dev-complainer.azurewebsites.net",
+        "https://luri-dev-backend.azurewebsites.net",
+        // "https://luri-dev-complainer.azurewebsites.net",
         // "https://api.complainer.com/",
         // "https://dev-api.wwjdchat.com/",
 });
